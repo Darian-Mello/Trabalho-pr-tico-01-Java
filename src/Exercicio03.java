@@ -21,7 +21,7 @@ public class Exercicio03 {
 
         System.out.println("\n\nData informada: " + data.format(formato));
         for(int i=0; i<5; i++){
-            data = data.plusDays(7l);
+            data = data.plusDays(7);
             System.out.println("Data de pagamento: " + data.format(formato));
         }
     }

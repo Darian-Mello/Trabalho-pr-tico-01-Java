@@ -17,13 +17,22 @@ public class Exercicio04 {
                     System.out.println("Olá, Informe o número de parcelas(o número deve ser maior que 0): ");
                     parcelas = Integer.parseInt(entrada.nextLine());
                 }while(parcelas <= 0);
-                System.out.println("Informe o valor da compra: ");
-                compra = entrada.nextDouble();
                 correto = true;
             } catch (Exception e) {
                 System.out.println("\nOcorreu um erro: " + e.getMessage() + "\n" + e.getClass() + "\n");
             }
         }
+        correto = false;
+        while (!correto) {
+            try {
+                System.out.println("Informe o valor da compra: ");
+                compra = Double.parseDouble(entrada.nextLine());
+                correto = true;
+            } catch (Exception e) {
+                System.out.println("\nOcorreu um erro: " + e.getMessage() + "\n" + e.getClass() + "\n");
+            }
+        }
+
         valores = new double[parcelas];
         datas = new LocalDate[parcelas];
         datas[0] = LocalDate.now();
